@@ -1,0 +1,53 @@
+{
+    "name": "app-vise/laravel-appstore-server-notifications",
+    "description": "Handling Appstore server to server notifications",
+    "keywords": [
+        "app-vise",
+        "appvise",
+        "laravel-appstore-server-to-server-notifications",
+        "laravel-appstore-server-notifications",
+        "laravel in app subscriptions",
+        "laravel-appstore-server-notifications"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daan Geurts",
+            "email": "daan@app-vise.nl",
+            "homepage": "https://www.app-vise.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "~5.7.0|^6.0",
+        "bensampo/laravel-enum": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.8.0|^4.0",
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Appvise\\AppStoreNotifications\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Appvise\\AppStoreNotifications\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --verbose"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Appvise\\AppStoreNotifications\\NotificationsServiceProvider"
+            ]
+        }
+    }
+}
