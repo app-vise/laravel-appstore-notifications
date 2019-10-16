@@ -2,12 +2,12 @@
 
 namespace Appvise\AppStoreNotifications\Tests;
 
-use Appvise\AppStoreNotifications\NotificationsServiceProvider;
 use Exception;
+use CreateAppleNotificationsTable;
 use Illuminate\Foundation\Exceptions\Handler;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use CreateAppleNotificationsTable;
+use Appvise\AppStoreNotifications\NotificationsServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
 {
@@ -71,5 +71,4 @@ abstract class TestCase extends OrchestraTestCase
             }
         });
     }
-
 }

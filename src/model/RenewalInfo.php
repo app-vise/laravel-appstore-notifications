@@ -2,7 +2,6 @@
 
 namespace Appvise\AppStoreNotifications\Model;
 
-
 class RenewalInfo
 {
     private $autoRenewProductId;
@@ -15,7 +14,6 @@ class RenewalInfo
     private $gracePeriodExpiresDate;
     private $gracePeriodExpiresDateMs;
     private $gracePeriodExpiresDatePst;
-
 
     public function __construct()
     {
@@ -33,8 +31,10 @@ class RenewalInfo
         $instance->priceConsentStatus = $pendingRenewalInfo['price_consent_status'] ?? null;
         $instance->gracePeriodExpiresDate = $pendingRenewalInfo['grace_period_expires_date'] ?? null;
         $instance->gracePeriodExpiresDatePst = $pendingRenewalInfo['grace_period_expires_date_pst'] ?? null;
+
         return $instance;
     }
+
     /**
      * Get the value of autoRenewProductId.
      */
