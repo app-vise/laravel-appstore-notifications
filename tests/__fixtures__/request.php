@@ -1,4 +1,5 @@
 <?php
+
 return json_decode('{
         "environment": "Sandbox",
         "notification_type": "INITIAL_BUY",
@@ -61,7 +62,6 @@ return json_decode('{
         ]
     }', true
 );
-
 
     //{
     //     "environment": "Sandbox",

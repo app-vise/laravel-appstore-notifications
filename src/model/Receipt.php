@@ -2,8 +2,6 @@
 
 namespace Appvise\AppStoreNotifications\Model;
 
-
-
 class Receipt
 {
     private $originalTransactionId;
@@ -37,7 +35,6 @@ class Receipt
 
     public function __construct()
     {
-
     }
 
     public static function createFromArray(array $receiptInfo)
@@ -74,7 +71,6 @@ class Receipt
 
         return $instance;
     }
-
 
     /**
      * Get the value of bid.

@@ -73,5 +73,4 @@ class IntegrationTest extends TestCase
 
         Queue::assertNotPushed(DummyJob::class);
     }
-
 }
