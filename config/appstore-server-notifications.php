@@ -1,4 +1,5 @@
 <?php
+
 return [
     /*
      * Apple will send the shared secret with the request that should match

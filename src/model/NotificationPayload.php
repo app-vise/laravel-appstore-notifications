@@ -26,10 +26,9 @@ class NotificationPayload
 
     public function __construct()
     {
-
     }
 
-    static function createFromRequest(Request $request)
+    public static function createFromRequest(Request $request)
     {
         $instance = new self();
         $instance->environment = $request->input('environment');
@@ -56,7 +55,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of environment
+     * Get the value of environment.
      */
     public function getEnvironment()
     {
@@ -64,7 +63,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of notificationType
+     * Get the value of notificationType.
      */
     public function getNotificationType()
     {
@@ -72,7 +71,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of pendingRenewalInfo
+     * Get the value of pendingRenewalInfo.
      */
     public function getPendingRenewalInfo()
     {
@@ -80,7 +79,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of autoRenewStatusChangeDateMs
+     * Get the value of autoRenewStatusChangeDateMs.
      */
     public function getAutoRenewStatusChangeDateMs()
     {
@@ -88,7 +87,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of autoRenewStatusChangeDatePst
+     * Get the value of autoRenewStatusChangeDatePst.
      */
     public function getAutoRenewStatusChangeDatePst()
     {
@@ -96,7 +95,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of autoRenewStatusChangeDate
+     * Get the value of autoRenewStatusChangeDate.
      */
     public function getAutoRenewStatusChangeDate()
     {
@@ -104,7 +103,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of autoRenewProductId
+     * Get the value of autoRenewProductId.
      */
     public function getAutoRenewProductId()
     {
@@ -112,7 +111,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of autoRenewStatus
+     * Get the value of autoRenewStatus.
      */
     public function getAutoRenewStatus()
     {
@@ -120,7 +119,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of latestExpiredReceiptInfo
+     * Get the value of latestExpiredReceiptInfo.
      */
     public function getLatestExpiredReceiptInfo()
     {
@@ -128,7 +127,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of latestExpiredReceipt
+     * Get the value of latestExpiredReceipt.
      */
     public function getLatestExpiredReceipt()
     {
@@ -136,7 +135,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of latestReceiptInfo
+     * Get the value of latestReceiptInfo.
      */
     public function getLatestReceiptInfo()
     {
@@ -144,7 +143,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of latestReceipt
+     * Get the value of latestReceipt.
      */
     public function getLatestReceipt()
     {
@@ -152,7 +151,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of webOrderLineItemId
+     * Get the value of webOrderLineItemId.
      */
     public function getWebOrderLineItemId()
     {
@@ -160,7 +159,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of cancellationDateMs
+     * Get the value of cancellationDateMs.
      */
     public function getCancellationDateMs()
     {
@@ -168,7 +167,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of cancellationDatePst
+     * Get the value of cancellationDatePst.
      */
     public function getCancellationDatePst()
     {
@@ -176,7 +175,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of cancellationDate
+     * Get the value of cancellationDate.
      */
     public function getCancellationDate()
     {
@@ -184,7 +183,7 @@ class NotificationPayload
     }
 
     /**
-     * Get the value of password
+     * Get the value of password.
      */
     public function getPassword()
     {

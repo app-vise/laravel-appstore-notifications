@@ -21,7 +21,8 @@ class RenewalInfo
     {
     }
 
-    public static function createFromRequest(array $pendingRenewalInfo) {
+    public static function createFromRequest(array $pendingRenewalInfo)
+    {
         $instance = new self();
         $instance->autoRenewProductId = $pendingRenewalInfo['auto_renew_product_id'] ?? null;
         $instance->autoRenewStatus = $pendingRenewalInfo['auto_renew_status'] ?? null;
@@ -35,7 +36,7 @@ class RenewalInfo
         return $instance;
     }
     /**
-     * Get the value of autoRenewProductId
+     * Get the value of autoRenewProductId.
      */
     public function getAutoRenewProductId()
     {
@@ -43,7 +44,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of autoRenewStatus
+     * Get the value of autoRenewStatus.
      */
     public function getAutoRenewStatus()
     {
@@ -51,7 +52,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of expirationIntent
+     * Get the value of expirationIntent.
      */
     public function getExpirationIntent()
     {
@@ -59,7 +60,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of originalTransactionId
+     * Get the value of originalTransactionId.
      */
     public function getOriginalTransactionId()
     {
@@ -67,7 +68,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of isInBillingRetryPeriod
+     * Get the value of isInBillingRetryPeriod.
      */
     public function getIsInBillingRetryPeriod()
     {
@@ -75,7 +76,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of productId
+     * Get the value of productId.
      */
     public function getProductId()
     {
@@ -83,7 +84,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of priceConsentStatus
+     * Get the value of priceConsentStatus.
      */
     public function getPriceConsentStatus()
     {
@@ -91,7 +92,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of gracePeriodExpiresDate
+     * Get the value of gracePeriodExpiresDate.
      */
     public function getGracePeriodExpiresDate()
     {
@@ -99,7 +100,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of gracePeriodExpiresDateMs
+     * Get the value of gracePeriodExpiresDateMs.
      */
     public function getGracePeriodExpiresDateMs()
     {
@@ -107,7 +108,7 @@ class RenewalInfo
     }
 
     /**
-     * Get the value of gracePeriodExpiresDatePst
+     * Get the value of gracePeriodExpiresDatePst.
      */
     public function getGracePeriodExpiresDatePst()
     {

@@ -2,11 +2,11 @@
 
 namespace Appvise\AppStoreNotifications;
 
-use Appvise\AppStoreNotifications\Exceptions\WebhookFailed;
-use Appvise\AppStoreNotifications\Model\AppleNotification;
-use Appvise\AppStoreNotifications\Model\NotificationPayload;
-use Appvise\AppStoreNotifications\Model\NotificationType;
 use Illuminate\Http\Request;
+use Appvise\AppStoreNotifications\Model\NotificationType;
+use Appvise\AppStoreNotifications\Model\AppleNotification;
+use Appvise\AppStoreNotifications\Exceptions\WebhookFailed;
+use Appvise\AppStoreNotifications\Model\NotificationPayload;
 
 class WebhooksController
 {
@@ -24,7 +24,6 @@ class WebhooksController
         if (is_null($jobClass)) {
             throw WebhookFailed::jobClassDoesNotExist($jobConfigKey);
         }
-
 
         $job = new $jobClass($payload);
         dispatch($job);

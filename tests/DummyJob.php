@@ -2,13 +2,12 @@
 
 namespace Appvise\AppStoreNotifications\Tests;
 
-use Appvise\AppStoreNotifications\Model\NotificationPayload;
 use Illuminate\Bus\Queueable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
-
+use Appvise\AppStoreNotifications\Model\NotificationPayload;
 
 class DummyJob implements ShouldQueue
 {
@@ -21,7 +20,7 @@ class DummyJob implements ShouldQueue
         $this->payload = $payload;
     }
 
-    function handle()
+    public function handle()
     {
     }
 }

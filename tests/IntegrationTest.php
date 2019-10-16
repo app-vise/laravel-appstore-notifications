@@ -2,9 +2,9 @@
 
 namespace Appvise\AppStoreNotifications\Tests;
 
-use Appvise\AppStoreNotifications\Model\AppleNotification;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Route;
+use Appvise\AppStoreNotifications\Model\AppleNotification;
 
 class IntegrationTest extends TestCase
 {
@@ -19,20 +19,18 @@ class IntegrationTest extends TestCase
         config(
             [
                 'appstore-server-notifications.jobs' => [
-                    'initial_buy' => DummyJob::class
+                    'initial_buy' => DummyJob::class,
                 ],
                 'appstore-server-notifications.shared_secret' => 'VALID_APPLE_PASSWORD',
             ]
         );
-
     }
 
     /** @test */
     public function it_can_handle_a_valid_request()
     {
-        $payload = include_once __DIR__ . '/__fixtures__/request.php';
-
-        $payload['password'] = "VALID_APPLE_PASSWORD";
+        $payload = include_once __DIR__.'/__fixtures__/request.php';
+        $payload['password'] = 'VALID_APPLE_PASSWORD';
 
         $this
             ->postJson('/apple/server/notifications', $payload)
@@ -51,8 +49,8 @@ class IntegrationTest extends TestCase
     /** @test */
     public function a_request_with_an_invalid_password_wont_be_logged()
     {
-        $payload = include_once __DIR__ . '/__fixtures__/request.php';
-        $payload['password'] = "NON_VALID_APPLE_PASSWORD";
+        $payload = include_once __DIR__.'/__fixtures__/request.php';
+        $payload['password'] = 'NON_VALID_APPLE_PASSWORD';
 
         $this
             ->postJson('/apple/server/notifications', $payload)

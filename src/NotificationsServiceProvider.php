@@ -1,4 +1,5 @@
 <?php
+
 namespace Appvise\AppStoreNotifications;
 
 use Illuminate\Support\ServiceProvider;

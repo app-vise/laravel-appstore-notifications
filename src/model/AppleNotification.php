@@ -8,7 +8,7 @@ class AppleNotification extends Model
 {
     public $guarded = [];
 
-    public static function storeNotification(String $notificationType, NotificationPayload $notificationPayload): AppleNotification
+    public static function storeNotification(String $notificationType, NotificationPayload $notificationPayload)
     {
         return self::create([
             'type' => $notificationType,

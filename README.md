@@ -1,10 +1,10 @@
 # Handle Appstore server-to-server notifications for auto-renewable subscriptions
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/app-vise/laravel-appstore-notifications.svg?style=flat-square)](https://packagist.org/packages/app-vise/laravel-appstore-notifications)
-[![Build Status](https://img.shields.io/travis/app-vise/laravel-appstore-notifications/master.svg?style=flat-square)](https://travis-ci.org/app-vise/laravel-appstore-notifications)
-[![StyleCI](https://styleci.io/repos/105920179/shield?branch=master)](https://styleci.io/repos/105920179)
-[![Quality Score](https://img.shields.io/scrutinizer/g/app-vise/laravel-appstore-notifications.svg?style=flat-square)](https://scrutinizer-ci.com/g/app-vise/laravel-appstore-notifications)
-[![Total Downloads](https://img.shields.io/packagist/dt/app-vise/laravel-appstore-notifications.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-appstore-notifications)
+[![Build Status](https://travis-ci.org/app-vise/laravel-appstore-notifications.svg?branch=master)](https://travis-ci.org/app-vise/laravel-appstore-notifications)
+[![StyleCI](https://styleci.io/repos/215539443/shield?branch=master)](https://styleci.io/repos/215539443)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/app-vise/laravel-appstore-notifications/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/app-vise/laravel-appstore-notifications/?branch=master)
+[![Total Downloads](https://img.shields.io/packagist/dt/app-vise/laravel-appstore-notifications.svg?style=flat-square)](https://packagist.org/packages/app-vise/laravel-appstore-notifications)
 
 ## Installation
 You can install this package via composer

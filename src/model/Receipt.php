@@ -40,7 +40,7 @@ class Receipt
 
     }
 
-    static function createFromArray(array $receiptInfo)
+    public static function createFromArray(array $receiptInfo)
     {
         $instance = new self();
         $instance->originalTransactionId = $receiptInfo['original_transaction_id'] ?? null;
@@ -71,12 +71,13 @@ class Receipt
         $instance->transactionId = $receiptInfo['transaction_id'] ?? null;
         $instance->bvrs = $receiptInfo['bvrs'] ?? null;
         $instance->bid = $receiptInfo['bid'] ?? null;
+
         return $instance;
     }
 
 
     /**
-     * Get the value of bid
+     * Get the value of bid.
      */
     public function getBid()
     {
@@ -84,7 +85,7 @@ class Receipt
     }
 
     /**
-     * Get the value of bvrs
+     * Get the value of bvrs.
      */
     public function getBvrs()
     {
@@ -92,7 +93,7 @@ class Receipt
     }
 
     /**
-     * Get the value of transactionId
+     * Get the value of transactionId.
      */
     public function getTransactionId()
     {
@@ -100,7 +101,7 @@ class Receipt
     }
 
     /**
-     * Get the value of versionExternalIdentifier
+     * Get the value of versionExternalIdentifier.
      */
     public function getVersionExternalIdentifier()
     {
@@ -108,7 +109,7 @@ class Receipt
     }
 
     /**
-     * Get the value of appItemId
+     * Get the value of appItemId.
      */
     public function getAppItemId()
     {
@@ -116,7 +117,7 @@ class Receipt
     }
 
     /**
-     * Get the value of itemId
+     * Get the value of itemId.
      */
     public function getItemId()
     {
@@ -124,7 +125,7 @@ class Receipt
     }
 
     /**
-     * Get the value of isTrialPeriod
+     * Get the value of isTrialPeriod.
      */
     public function getIsTrialPeriod()
     {
@@ -132,7 +133,7 @@ class Receipt
     }
 
     /**
-     * Get the value of isInIntroOfferPeriod
+     * Get the value of isInIntroOfferPeriod.
      */
     public function getIsInIntroOfferPeriod()
     {
@@ -140,7 +141,7 @@ class Receipt
     }
 
     /**
-     * Get the value of uniqueVendorIdentifier
+     * Get the value of uniqueVendorIdentifier.
      */
     public function getUniqueVendorIdentifier()
     {
@@ -148,7 +149,7 @@ class Receipt
     }
 
     /**
-     * Get the value of uniqueIdentifier
+     * Get the value of uniqueIdentifier.
      */
     public function getUniqueIdentifier()
     {
@@ -156,7 +157,7 @@ class Receipt
     }
 
     /**
-     * Get the value of quantity
+     * Get the value of quantity.
      */
     public function getQuantity()
     {
@@ -164,7 +165,7 @@ class Receipt
     }
 
     /**
-     * Get the value of expiresDateFormattedPst
+     * Get the value of expiresDateFormattedPst.
      */
     public function getExpiresDateFormattedPst()
     {
@@ -172,7 +173,7 @@ class Receipt
     }
 
     /**
-     * Get the value of expiresDateFormatted
+     * Get the value of expiresDateFormatted.
      */
     public function getExpiresDateFormatted()
     {
@@ -180,7 +181,7 @@ class Receipt
     }
 
     /**
-     * Get the value of expiresDateMs
+     * Get the value of expiresDateMs.
      */
     public function getExpiresDateMs()
     {
@@ -188,7 +189,7 @@ class Receipt
     }
 
     /**
-     * Get the value of expiresDate
+     * Get the value of expiresDate.
      */
     public function getExpiresDate()
     {
@@ -196,7 +197,7 @@ class Receipt
     }
 
     /**
-     * Get the value of cancellationDatePst
+     * Get the value of cancellationDatePst.
      */
     public function getCancellationDatePst()
     {
@@ -204,7 +205,7 @@ class Receipt
     }
 
     /**
-     * Get the value of cancellationDateMs
+     * Get the value of cancellationDateMs.
      */
     public function getCancellationDateMs()
     {
@@ -212,7 +213,7 @@ class Receipt
     }
 
     /**
-     * Get the value of cancellationDate
+     * Get the value of cancellationDate.
      */
     public function getCancellationDate()
     {
@@ -220,7 +221,7 @@ class Receipt
     }
 
     /**
-     * Get the value of cancellationReason
+     * Get the value of cancellationReason.
      */
     public function getCancellationReason()
     {
@@ -228,7 +229,7 @@ class Receipt
     }
 
     /**
-     * Get the value of originalPurchaseDatePst
+     * Get the value of originalPurchaseDatePst.
      */
     public function getOriginalPurchaseDatePst()
     {
@@ -236,7 +237,7 @@ class Receipt
     }
 
     /**
-     * Get the value of originalPurchaseDateMs
+     * Get the value of originalPurchaseDateMs.
      */
     public function getOriginalPurchaseDateMs()
     {
@@ -244,7 +245,7 @@ class Receipt
     }
 
     /**
-     * Get the value of originalPurchaseDate
+     * Get the value of originalPurchaseDate.
      */
     public function getOriginalPurchaseDate()
     {
@@ -252,7 +253,7 @@ class Receipt
     }
 
     /**
-     * Get the value of purchaseDatePst
+     * Get the value of purchaseDatePst.
      */
     public function getPurchaseDatePst()
     {
@@ -260,7 +261,7 @@ class Receipt
     }
 
     /**
-     * Get the value of purchaseDate
+     * Get the value of purchaseDate.
      */
     public function getPurchaseDate()
     {
@@ -268,7 +269,7 @@ class Receipt
     }
 
     /**
-     * Get the value of purchaseDateMs
+     * Get the value of purchaseDateMs.
      */
     public function getPurchaseDateMs()
     {
@@ -276,7 +277,7 @@ class Receipt
     }
 
     /**
-     * Get the value of productId
+     * Get the value of productId.
      */
     public function getProductId()
     {
@@ -284,7 +285,7 @@ class Receipt
     }
 
     /**
-     * Get the value of webOrderLineItemId
+     * Get the value of webOrderLineItemId.
      */
     public function getWebOrderLineItemId()
     {
@@ -292,7 +293,7 @@ class Receipt
     }
 
     /**
-     * Get the value of originalTransactionId
+     * Get the value of originalTransactionId.
      */
     public function getOriginalTransactionId()
     {
