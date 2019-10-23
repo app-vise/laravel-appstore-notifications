@@ -41,7 +41,11 @@ class NotificationPayload
         $instance->latestReceipt = $request->input('latest_receipt');
         $instance->latestReceiptInfo = Receipt::createFromArray($request->input('latest_receipt_info'));
         $instance->latestExpiredReceipt = $request->input('latest_expired_receipt');
-        $instance->latestExpiredReceiptInfo = Receipt::createFromArray($request->input('latest_expired_receipt_info'));
+        if ($request->has('latest_expired_receipt_info')) {
+            $instance->latestExpiredReceiptInfo = Receipt::createFromArray($request->input('latest_expired_receipt_info'));
+        } else {
+            $instance->latestExpiredReceiptInfo = null;
+        }
         $instance->autoRenewStatus = $request->input('auto_renew_status');
         $instance->autoRenewProductId = $request->input('auto_renew_product_id');
         $instance->autoRenewStatusChangeDate = $request->input('auto_renew_status_change_date');

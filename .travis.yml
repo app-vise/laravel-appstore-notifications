@@ -13,8 +13,6 @@ matrix:
           env: LARAVEL='5.7.*' TESTBENCH='3.7.*' PHPENUM='1.*' PHPUNIT='7.*' COMPOSER_FLAGS='--prefer-stable'
         - php: 7.3
           env: LARAVEL='5.7.*' TESTBENCH='3.7.*' PHPENUM='1.*' PHPUNIT='7.*' COMPOSER_FLAGS='--prefer-lowest'
-        - php: 7.1
-          env: LARAVEL='5.8.*' TESTBENCH='3.8.*' PHPENUM='1.*' PHPUNIT='8.*' COMPOSER_FLAGS='--prefer-stable'
         - php: 7.2
           env: LARAVEL='5.8.*' TESTBENCH='3.8.*' PHPENUM='1.*' PHPUNIT='8.*' COMPOSER_FLAGS='--prefer-stable'
         - php: 7.3
@@ -22,10 +20,10 @@ matrix:
 
 before_install:
     - travis_retry composer self-update
-    - travis_retry composer require --no-update --no-interaction "illuminate/support:${LARAVEL}" "orchestra/testbench:${TESTBENCH}" "bensampo/laravel-enum:${PHPENUM}" "phpunit/phpunit:${PHPUNIT}"
+    - travis_retry composer require --no-update --no-interaction
 
 install:
-    - travis_retry composer update ${COMPOSER_FLAGS} --prefer-dist --no-interaction --no-suggest
+    - travis_retry composer update --prefer-dist --no-interaction --no-suggest
 
 script:
     - vendor/bin/phpunit
