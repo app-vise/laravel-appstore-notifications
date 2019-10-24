@@ -51,8 +51,12 @@ class NotificationPayload
         $instance->autoRenewStatusChangeDate = $request->input('auto_renew_status_change_date');
         $instance->autoRenewStatusChangeDatePst = $request->input('auto_renew_status_change_date_pst');
         $instance->autoRenewStatusChangeDateMs = $request->input('auto_renew_status_change_date_ms');
-        foreach ($request->input('pending_renewal_info') as $pendingRenewalInfo) {
-            $instance->pendingRenewalInfo[] = RenewalInfo::createFromRequest($pendingRenewalInfo);
+        if ($request->has('pending_renewal_info')) {
+            foreach ($request->input('pending_renewal_info') as $pendingRenewalInfo) {
+                $instance->pendingRenewalInfo[] = RenewalInfo::createFromRequest($pendingRenewalInfo);
+            }
+        } else {
+            $instance->pendingRenewalInfo = null;
         }
 
         return $instance;
