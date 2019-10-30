@@ -301,7 +301,7 @@ class Receipt
     }
 
     /**
-     * Get the value of isUpgraded
+     * Get the value of isUpgraded.
      */
     public function getIsUpgraded()
     {
@@ -309,7 +309,7 @@ class Receipt
     }
 
     /**
-     * Get the value of promotionalOfferId
+     * Get the value of promotionalOfferId.
      */
     public function getPromotionalOfferId()
     {
