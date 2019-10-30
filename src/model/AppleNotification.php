@@ -8,11 +8,13 @@ class AppleNotification extends Model
 {
     public $guarded = [];
 
-    public static function storeNotification(string $notificationType, NotificationPayload $notificationPayload)
+    public static function storeNotification(string $notificationType, array $notificationPayload)
     {
-        return self::create([
+        return self::create(
+            [
             'type' => $notificationType,
-            'payload' => serialize($notificationPayload),
-        ]);
+            'payload' => $notificationPayload,
+            ]
+        );
     }
 }

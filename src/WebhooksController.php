@@ -13,11 +13,11 @@ class WebhooksController
     public function __invoke(Request $request)
     {
         $jobConfigKey = NotificationType::{$request->input('notification_type')}();
+        $this->determineValidRequest($request->input('password'));
+
+        AppleNotification::storeNotification($jobConfigKey, $request->input());
+
         $payload = NotificationPayload::createFromRequest($request);
-
-        $this->determineValidRequest($payload);
-
-        AppleNotification::storeNotification($jobConfigKey, $payload);
 
         $jobClass = config("appstore-server-notifications.jobs.{$jobConfigKey}", null);
 
@@ -31,9 +31,9 @@ class WebhooksController
         return response()->json();
     }
 
-    private function determineValidRequest(NotificationPayload $notificationPayload): bool
+    private function determineValidRequest(string $password): bool
     {
-        if ($notificationPayload->getPassword() !== config('appstore-server-notifications.shared_secret')) {
+        if ($password !== config('appstore-server-notifications.shared_secret')) {
             throw WebhookFailed::nonValidRequest();
         }
 

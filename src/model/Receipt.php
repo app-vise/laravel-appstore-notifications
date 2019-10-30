@@ -14,6 +14,7 @@ class Receipt
     private $originalPurchaseDateMs;
     private $originalPurchaseDatePst;
     private $cancellationReason;
+    private $promotionalOfferId;
     private $cancellationDate;
     private $cancellationDateMs;
     private $cancellationDatePst;
@@ -26,6 +27,7 @@ class Receipt
     private $uniqueVendorIdentifier;
     private $isInIntroOfferPeriod;
     private $isTrialPeriod;
+    private $isUpgraded;
     private $itemId;
     private $appItemId;
     private $versionExternalIdentifier;
@@ -42,6 +44,7 @@ class Receipt
         $instance = new self();
         $instance->originalTransactionId = $receiptInfo['original_transaction_id'] ?? null;
         $instance->webOrderLineItemId = $receiptInfo['web_order_line_item_id'] ?? null;
+        $instance->promotionalOfferId = $receiptInfo['promotional_offer_id'] ?? null;
         $instance->productId = $receiptInfo['product_id'] ?? null;
         $instance->purchaseDateMs = $receiptInfo['purchase_date_ms'] ?? null;
         $instance->purchaseDate = $receiptInfo['purchase_date'] ?? null;
@@ -62,6 +65,7 @@ class Receipt
         $instance->uniqueVendorIdentifier = $receiptInfo['unique_vendor_identifier'] ?? null;
         $instance->isInIntroOfferPeriod = $receiptInfo['is_in_intro_offer_period'] ?? null;
         $instance->isTrialPeriod = $receiptInfo['is_trial_period'] ?? null;
+        $instance->isUpgraded = $receiptInfo['is_upgraded'] ?? null;
         $instance->itemId = $receiptInfo['item_id'] ?? null;
         $instance->appItemId = $receiptInfo['app_item_id'] ?? null;
         $instance->versionExternalIdentifier = $receiptInfo['version_external_identifier'] ?? null;
@@ -294,5 +298,21 @@ class Receipt
     public function getOriginalTransactionId()
     {
         return $this->originalTransactionId;
+    }
+
+    /**
+     * Get the value of isUpgraded
+     */
+    public function getIsUpgraded()
+    {
+        return $this->isUpgraded;
+    }
+
+    /**
+     * Get the value of promotionalOfferId
+     */
+    public function getPromotionalOfferId()
+    {
+        return $this->promotionalOfferId;
     }
 }

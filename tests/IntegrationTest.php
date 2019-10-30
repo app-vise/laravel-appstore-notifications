@@ -29,6 +29,7 @@ class IntegrationTest extends TestCase
     /** @test */
     public function it_can_handle_a_valid_request()
     {
+        $this->withExceptionHandling();
         $payload = include_once __DIR__.'/__fixtures__/request.php';
         $payload['password'] = 'VALID_APPLE_PASSWORD';
 
